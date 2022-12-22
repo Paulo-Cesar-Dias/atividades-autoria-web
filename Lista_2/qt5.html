@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+<body>
+    <script type="text/javascript">
+        var ida1 = parseInt(prompt("Digite a idade do atleta 1:"))
+        var ida2 = parseInt(prompt("Digite a idade do atleta 2:"));
+        var ida3 = parseInt(prompt("Digite a idade do atleta 3:"));
+        var ida4 = parseInt(prompt("Digite a idade do atleta 4:"));
+        var ida5 = parseInt(prompt("Digite a idade do atleta 5:"));
+
+        function categ(idade) {
+            var resp
+            if (idade>=5 && idade<=7){
+                resp="Infantil"
+            }else if(idade>=8 && idade <=10){
+                resp="Juvenil"
+            }else if (idade >=11 && idade<=15) {
+                resp="Adolecente"
+            }else if(idade >=16 && idade <=30){
+                resp="Adulto"
+            }else if (idade>30){
+                resp="Sênior"
+            }
+            return resp
+        }
+        document.write("<table border=1px><tr><td>Idade</td><td>Categoria</td></tr>",
+            "<tr><td>",ida1,"</td><td>",categ(ida1),"</td></tr>",
+            "<tr><td>",ida2,"</td><td>",categ(ida2),"</td> </tr>",
+            "<tr><td>",ida3,"</td><td>",categ(ida3),"</td></tr>",
+            "<tr><td>",ida4,"</td><td>",categ(ida4),"</td> </tr>",
+            "<tr><td>",ida5,"</td><td>",categ(ida5),"</td> </tr></table>")
+    
+    
+    </script>
+</body>
+
+
+</html>
