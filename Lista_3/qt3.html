@@ -8,14 +8,16 @@
 </head>
 <body>
     <script type="text/javascript">
-        a=1
-        b="<li>"+a+"</li>"
-        while (a<50) {
-            a++
-            b=b+"<li>"+a+"</li>"
-            
+        a=parseInt(prompt("Digite um valor:"))
+        b=a+1
+        result="<li>"+b+"</li>"
+        
+        while (b!=a+20) {
+            b++
+            result=result+"<li>"+b+"</li>"
         }
-        document.write("<ul>",b,"</ul>")
+        document.write("O Nùmero"+a+" possui os 20 próximos números")
+        document.write("<ul>"+result+" </ul>")
 
     </script>
 </body>
