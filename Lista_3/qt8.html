@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a1=parseInt(prompt("Digite um valor:"))
+        var a2=parseInt(prompt("Digite um valor:"))
+        var a3=parseInt(prompt("Digite um valor:"))
+        var a4=parseInt(prompt("Digite um valor:"))
+        var a5=parseInt(prompt("Digite um valor:"))
+        var referencia=0
+        function soma(num) {
+            if (num>30){
+                referencia++    
+            }
+        }        
+        soma(a1)
+        soma(a2)
+        soma(a3)
+        soma(a4)
+        soma(a5)
+        document.write("<h4>Quantidade de números maiores que 30 é: "+referencia+"</h4>")
+    </script>
+</body>
+</html>
