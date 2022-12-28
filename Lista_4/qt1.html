@@ -8,18 +8,35 @@
 </head>
 <body>
  
-    <button onclick="funcao()">teste butonixis</button>
+    <button onclick="funcao()">Botão</button>
     <input type="text" id="texto1">
     <input type="text" id="texto2">
+    <br>
     <input type="text" id="texto3">
     
     <script type="text/javascript">
             function funcao() {
-                var a1=parseInt(document.getElementById("texto1").value)
-                var a2=parseInt(document.getElementById("texto1").value)
+                var a1=document.getElementById("texto1").value
+                var a2=document.getElementById("texto2").value
                 if (a1<a2) {
-                    const resposta=document.querySelector("#texto3")
-                    resposta.value=4
+                    var resposta=document.getElementById("texto3")
+                    a1++
+                    var resp=a1
+                    while(a1<a2--) {
+                        a1++
+                        resp=resp+","+a1     
+                    }
+                    resposta.value=resp
+                }
+                if (a1>a2) {
+                    var resposta=document.getElementById("texto3")
+                    a1--
+                    var resp=a1
+                    while(a1>a2++) {
+                        a1--
+                        resp=resp+","+a1     
+                    }
+                    resposta.value=resp
                 }
 
 
