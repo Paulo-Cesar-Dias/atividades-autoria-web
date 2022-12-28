@@ -8,38 +8,40 @@
 </head>
 <body>
  
-    <button onclick="funcao()">Botão</button>
     <input type="text" id="texto1">
     <input type="text" id="texto2">
     <br>
+    <button onclick="funcao()">Botão</button>
     <input type="text" id="texto3">
     
     <script type="text/javascript">
             function funcao() {
                 var a1=document.getElementById("texto1").value
                 var a2=document.getElementById("texto2").value
+                var resposta=document.querySelector("#texto3")
                 if (a1<a2) {
-                    var resposta=document.getElementById("texto3")
                     a1++
-                    var resp=a1
-                    while(a1<a2--) {
+                    resposta.value=a1
+                    while(a1<a2-1) {
                         a1++
-                        resp=resp+","+a1     
+                        resposta.value+=","+a1    
                     }
-                    resposta.value=resp
+  
                 }
                 if (a1>a2) {
-                    var resposta=document.getElementById("texto3")
                     a1--
-                    var resp=a1
-                    while(a1>a2++) {
+                    if (a1>11) {
                         a1--
-                        resp=resp+","+a1     
                     }
-                    resposta.value=resp
+                    resposta.value=a1
+                    a2++
+                    while(a1>a2) {
+                        a1--
+                        resposta.value+=","+a1    
+                    }
+                    
                 }
-
-
+                
             }
     </script>
 </body>
